@@ -1,8 +1,10 @@
 const expect = require('chai').expect;
 const axios = require('axios');
+const { retries } = require('mocha');
 
 describe('async test suite', () => {
-  it('promised based way', () => {
+  it('promised based way', function () {
+    this.timeout(1000);
     return axios
       .get('https://reqres.in/api/users/2')
       .then(res =>

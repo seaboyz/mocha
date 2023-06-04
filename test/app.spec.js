@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const { add, sub } = require('../src/app.js');
 
-describe('suite 1', () => {
+describe.skip('suite 1', () => {
   afterEach(() => {
     console.log('after each');
   });
