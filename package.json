@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha './test/calc.spec.js'"
+    "test": "mocha './test/user.stub.spec.js'"
   },
   "repository": {
     "type": "git",
