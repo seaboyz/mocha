@@ -17,6 +17,11 @@ describe('async test suite', () => {
         expect(res.data.data.email).to.be.equal('janet.weaver@reqres.in');
         done();
       })
-      .catch(console.log);
+      .catch(done);
+  });
+
+  it('await based way', async () => {
+    const res = await axios.get('https://reqres.in/api/users/2');
+    expect(res.data.data.email).to.be.equal('janet.weaver@reqres.in');
   });
 });
