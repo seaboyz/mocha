@@ -1,9 +1,22 @@
+const sinon = require('sinon');
 const { myCalc } = require('../src/Calculator.js');
 const expect = require('chai').expect;
 
 describe('Basic Test', () => {
-  it.only('sum - should return correct output with positive values', () => {
-    const result = myCalc.sum(2, 3);
-    expect(result).to.equal(5);
+  let sumSpy;
+
+  beforeEach(() => {
+    sumSpy = sinon.spy(myCalc, 'sum');
+  });
+
+  afterEach(() => {
+    sumSpy.restore();
+  });
+  it('spy add method', () => {
+    // act
+    myCalc.sum(10, 20);
+    // assert
+    expect(sumSpy.calledOnce).to.be.true;
+    expect(sumSpy.calledOnceWithExactly(10, 20)).to.be.true;
   });
 });
