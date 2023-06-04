@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha 'test/**/async.app.spec.js' --timeout 50000 --watch"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/seaboyz/mocha#readme",
   "dependencies": {
+    "axios": "^1.4.0",
     "chai": "^4.3.7",
     "mocha": "^10.2.0"
   }
