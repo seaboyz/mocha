@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 'test/**/async.app.spec.js' --timeout 50000 --watch"
+    "test": "mocha 'test/**/async.app.spec.js' --timeout 50000"
   },
   "repository": {
     "type": "git",
